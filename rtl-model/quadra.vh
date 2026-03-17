@@ -8,6 +8,8 @@ typedef logic ck_t; // clock
 typedef logic rs_t; // reset
 typedef logic dv_t; // data valid
 
+`define sh(x) $signed(x)
+
 // --------------------------------------------------------------------------------
 // I/O precision
 // --------------------------------------------------------------------------------
@@ -46,11 +48,7 @@ localparam int X2_W = X2_I + X2_F;
 typedef logic [X2_W-1:0] x2_t; 
 // sq: x2^2
 localparam int SQ_I = X2_I + X2_I;
-//`ifdef FULL_PRECISION
-    localparam int SQ_F = X2_F + X2_F;
-//`else
-    //localparam int SQ_F = 24;
-//`endif
+localparam int SQ_F = X2_F + X2_F;
 localparam int SQ_W = SQ_I + SQ_F;
 
 typedef logic [SQ_W-1:0] sq_t; 
@@ -89,33 +87,21 @@ typedef logic signed [S_W-1:0] s_t;
 
 // t0:
 localparam int T0_I = A_I;
-//`ifdef FULL_PRECISION
-    localparam int T0_F = A_F;
-//`else
-    //localparam int T0_F = S_F;
-//`endif
+localparam int T0_F = A_F;
 localparam int T0_W = T0_I + T0_F;
 
 typedef logic signed [T0_W-1:0] t0_t;
 
 // t1:
 localparam int T1_I = B_I + X2_I;
-//`ifdef FULL_PRECISION
-    localparam int T1_F = B_F + X2_F;
-//`else
-  //  localparam int T1_F = S_F;
-//`endif
+localparam int T1_F = B_F + X2_F;
 localparam int T1_W = T1_I + T1_F;
 
 typedef logic signed [T1_W-1:0] t1_t;
 
 // t2:
 localparam int T2_I = C_I + SQ_I;
-//`ifdef FULL_PRECISION
-    localparam int T2_F = C_F + SQ_F;
-//`else
-  //  localparam int T2_F = S_F;
-//`endif
+localparam int T2_F = C_F + SQ_F;
 localparam int T2_W = T2_I + T2_F;
 
 typedef logic signed [T2_W-1:0] t2_t;

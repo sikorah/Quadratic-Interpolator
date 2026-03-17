@@ -1,0 +1,43 @@
+--------------------------------------------------------------------------------
+Compiling with 'verilator' ...
+--------------------------------------------------------------------------------
+make: Entering directory '/home/sikorah/Workspace/verilator/obj_dir'
+ccache g++  -I.  -MMD -I/usr/local/share/verilator/include -I/usr/local/share/verilator/include/vltstd -DVERILATOR=1 -DVM_COVERAGE=0 -DVM_SC=0 -DVM_TIMING=0 -DVM_TRACE=1 -DVM_TRACE_FST=0 -DVM_TRACE_VCD=1 -DVM_TRACE_SAIF=0 -faligned-new -fcf-protection=none -Wno-bool-operation -Wno-int-in-bool-context -Wno-shadow -Wno-sign-compare -Wno-subobject-linkage -Wno-tautological-compare -Wno-uninitialized -Wno-unused-but-set-parameter -Wno-unused-but-set-variable -Wno-unused-parameter -Wno-unused-variable    -std=c++17 -I/home/sikorah/Workspace/libs/ac_types/include -I/home/sikorah/Workspace/c++-model   -Os  -c -o sim_main.o ../sim_main.cpp
+ccache g++ -Os  -I.  -MMD -I/usr/local/share/verilator/include -I/usr/local/share/verilator/include/vltstd -DVERILATOR=1 -DVM_COVERAGE=0 -DVM_SC=0 -DVM_TIMING=0 -DVM_TRACE=1 -DVM_TRACE_FST=0 -DVM_TRACE_VCD=1 -DVM_TRACE_SAIF=0 -faligned-new -fcf-protection=none -Wno-bool-operation -Wno-int-in-bool-context -Wno-shadow -Wno-sign-compare -Wno-subobject-linkage -Wno-tautological-compare -Wno-uninitialized -Wno-unused-but-set-parameter -Wno-unused-but-set-variable -Wno-unused-parameter -Wno-unused-variable    -std=c++17 -I/home/sikorah/Workspace/libs/ac_types/include -I/home/sikorah/Workspace/c++-model   -c -o verilated.o /usr/local/share/verilator/include/verilated.cpp
+ccache g++ -Os  -I.  -MMD -I/usr/local/share/verilator/include -I/usr/local/share/verilator/include/vltstd -DVERILATOR=1 -DVM_COVERAGE=0 -DVM_SC=0 -DVM_TIMING=0 -DVM_TRACE=1 -DVM_TRACE_FST=0 -DVM_TRACE_VCD=1 -DVM_TRACE_SAIF=0 -faligned-new -fcf-protection=none -Wno-bool-operation -Wno-int-in-bool-context -Wno-shadow -Wno-sign-compare -Wno-subobject-linkage -Wno-tautological-compare -Wno-uninitialized -Wno-unused-but-set-parameter -Wno-unused-but-set-variable -Wno-unused-parameter -Wno-unused-variable    -std=c++17 -I/home/sikorah/Workspace/libs/ac_types/include -I/home/sikorah/Workspace/c++-model   -c -o verilated_vcd_c.o /usr/local/share/verilator/include/verilated_vcd_c.cpp
+ccache g++ -Os  -I.  -MMD -I/usr/local/share/verilator/include -I/usr/local/share/verilator/include/vltstd -DVERILATOR=1 -DVM_COVERAGE=0 -DVM_SC=0 -DVM_TIMING=0 -DVM_TRACE=1 -DVM_TRACE_FST=0 -DVM_TRACE_VCD=1 -DVM_TRACE_SAIF=0 -faligned-new -fcf-protection=none -Wno-bool-operation -Wno-int-in-bool-context -Wno-shadow -Wno-sign-compare -Wno-subobject-linkage -Wno-tautological-compare -Wno-uninitialized -Wno-unused-but-set-parameter -Wno-unused-but-set-variable -Wno-unused-parameter -Wno-unused-variable    -std=c++17 -I/home/sikorah/Workspace/libs/ac_types/include -I/home/sikorah/Workspace/c++-model   -c -o verilated_threads.o /usr/local/share/verilator/include/verilated_threads.cpp
+python3 /usr/local/share/verilator/bin/verilator_includer -DVL_INCLUDE_OPT=include Vquadra_top.cpp Vquadra_top___024root__0.cpp Vquadra_top__Trace__0.cpp Vquadra_top__ConstPool__0__Slow.cpp Vquadra_top___024root__Slow.cpp Vquadra_top___024root__0__Slow.cpp Vquadra_top___024unit__Slow.cpp Vquadra_top___024unit__0__Slow.cpp Vquadra_top__Syms__Slow.cpp Vquadra_top__Trace__0__Slow.cpp Vquadra_top__TraceDecls__0__Slow.cpp > Vquadra_top__ALL.cpp
+ccache g++ -Os  -I.  -MMD -I/usr/local/share/verilator/include -I/usr/local/share/verilator/include/vltstd -DVERILATOR=1 -DVM_COVERAGE=0 -DVM_SC=0 -DVM_TIMING=0 -DVM_TRACE=1 -DVM_TRACE_FST=0 -DVM_TRACE_VCD=1 -DVM_TRACE_SAIF=0 -faligned-new -fcf-protection=none -Wno-bool-operation -Wno-int-in-bool-context -Wno-shadow -Wno-sign-compare -Wno-subobject-linkage -Wno-tautological-compare -Wno-uninitialized -Wno-unused-but-set-parameter -Wno-unused-but-set-variable -Wno-unused-parameter -Wno-unused-variable    -std=c++17 -I/home/sikorah/Workspace/libs/ac_types/include -I/home/sikorah/Workspace/c++-model   -c -o Vquadra_top__ALL.o Vquadra_top__ALL.cpp
+g++ -fuse-ld=mold   ../../c++-model/Quadra.o sim_main.o verilated.o verilated_vcd_c.o verilated_threads.o Vquadra_top__ALL.a    -pthread -lpthread -latomic   -o Vquadra_top
+rm Vquadra_top__ALL.verilator_deplist.tmp
+make: Leaving directory '/home/sikorah/Workspace/verilator/obj_dir'
+- V e r i l a t i o n   R e p o r t: Verilator 5.047 devel rev v5.046-40-g7cf539cf0
+- Verilator: Built from 0.148 MB sources in 6 modules, into 0.089 MB in 11 C++ files needing 0.000 MB
+- Verilator: Walltime 1.320 s (elab=0.003, cvt=0.017, bld=1.287); cpu 0.033 s on 16 threads; allocated 66.246 MB
+--------------------------------------------------------------------------------
+... done with 'verilator'.
+--------------------------------------------------------------------------------
+--------------------------------------------------------------------------------
+Running ./obj_dir/Vquadra_top ...
+--------------------------------------------------------------------------------
+    1.999998331070e+00    -7.294101069065e-02    -7.294297218323e-02  [  1.961492578431e-06]   != -7.294309139252e-02  [  2.080701867982e-06]  
+    1.999998450279e+00    -7.294124847414e-02    -7.294321060181e-02  [  1.962127666386e-06]   != -7.294332981110e-02  [  2.081336955936e-06]  
+    1.999998569489e+00    -7.294148625763e-02    -7.294344902039e-02  [  1.962762758503e-06]   != -7.294356822968e-02  [  2.081972048054e-06]  
+    1.999998688698e+00    -7.294172404111e-02    -7.294368743896e-02  [  1.963397854757e-06]   != -7.294380664825e-02  [  2.082607144308e-06]  
+    1.999998807907e+00    -7.294196182459e-02    -7.294392585754e-02  [  1.964032955160e-06]   != -7.294404506683e-02  [  2.083242244710e-06]  
+    1.999998927116e+00    -7.294219960806e-02    -7.294416427612e-02  [  1.964668059698e-06]   != -7.294428348541e-02  [  2.083877349249e-06]  
+    1.999999046326e+00    -7.294243739153e-02    -7.294440269470e-02  [  1.965303168400e-06]   != -7.294452190399e-02  [  2.084512457950e-06]  
+    1.999999165535e+00    -7.294267517500e-02    -7.294464111328e-02  [  1.965938281237e-06]   != -7.294476032257e-02  [  2.085147570788e-06]  
+    1.999999284744e+00    -7.294291295846e-02    -7.294487953186e-02  [  1.966573398224e-06]   != -7.294499874115e-02  [  2.085782687775e-06]  
+    1.999999403954e+00    -7.294315074192e-02    -7.294511795044e-02  [  1.967208519346e-06]   != -7.294523715973e-02  [  2.086417808897e-06]  
+    1.999999523163e+00    -7.294338852537e-02    -7.294535636902e-02  [  1.967843644632e-06]   != -7.294547557831e-02  [  2.087052934183e-06]  
+    1.999999642372e+00    -7.294362630882e-02    -7.294559478760e-02  [  1.968478774053e-06]   != -7.294571399689e-02  [  2.087688063604e-06]  
+    1.999999761581e+00    -7.294386409227e-02    -7.294583320618e-02  [  1.969113907624e-06]   != -7.294595241547e-02  [  2.088323197175e-06]  
+    1.999999880791e+00    -7.294410187571e-02    -7.294607162476e-02  [  1.969749045344e-06]   != -7.294619083405e-02  [  2.088958334895e-06]  
+
+Latency fifo contains 18446744073709551611 sample(s).
+
+Testbench ran for 36 clocks.
+--------------------------------------------------------------------------------
+Done with './obj_dir/Vquadra_top'.
+--------------------------------------------------------------------------------

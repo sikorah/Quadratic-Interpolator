@@ -13,20 +13,21 @@ module quadra
     t1_t t1;
     t2_t t2;
 
-    always_comb begin
-        t0 = t0_t'($signed(a));
-        t1 = t1_t'($signed(b) * $signed({1'b0, x2}));
-        t2 = t2_t'($signed(c) * $signed({1'b0, sq}));
-    end
-    
-    logic signed [Y_W-1:0] a_aligned, t1_aligned, t2_aligned;
+    s_t sum_s;
+    s_t sum_s_rounded;
 
     always_comb begin
-        a_aligned  = Y_W'(a); 
-        t1_aligned = Y_W'($signed(t1 >>> ((B_F + X_F) - Y_F))); 
-        t2_aligned = Y_W'($signed(t2 >>> ((C_F + (X_F * 2)) - Y_F)));
+        t0 = t0_t'(a);
+        t1 = t1_t'((b) * `sh({1'b0, x2}));
+        t2 = t2_t'((c) * `sh({1'b0, sq}));
 
-        y = t1_aligned + t2_aligned + a_aligned;
+        sum_s =
+            (s_t'(t0) <<< (S_F - A_F)) +
+            (s_t'(t1 >>> ((B_F + X_F) - S_F))) +
+            (s_t'(t2 >>> ((C_F + (X_F * 2)) - S_F)));
+
+        sum_s_rounded = sum_s + s_t'(1 << (R_F - 1));
+        y = y_t'(sum_s_rounded >>> R_F);
     end
 
 endmodule

@@ -46,22 +46,29 @@ void Vquadra_top___024root__trace_chg_0_sub_0(Vquadra_top___024root* vlSelf, Ver
                                                  & vlSelfRef.x))) 
                                 * (QData)((IData)((0x0001ffffU 
                                                    & vlSelfRef.x)))))),34);
-    bufp->chgIData(oldp+16,((0x01ffffffU & ((IData)(
-                                                    (0x0000000fffffffffULL 
-                                                     & VL_SHIFTRS_QQI(36,36,32, 
-                                                                      (0x0000000fffffffffULL 
-                                                                       & VL_MULS_QQQ(36, 
+    bufp->chgIData(oldp+16,((0x01ffffffU & VL_SHIFTRS_III(29,29,32, 
+                                                          (0x1fffffffU 
+                                                           & ((IData)(8U) 
+                                                              + 
+                                                              (VL_SHIFTL_III(29,29,32, 
+                                                                             VL_EXTENDS_II(29,25, vlSelfRef.quadra_top__DOT__a), 4U) 
+                                                               + 
+                                                               ((IData)(
+                                                                        (0x0000000fffffffffULL 
+                                                                         & VL_SHIFTRS_QQI(36,36,32, 
+                                                                                (0x0000000fffffffffULL 
+                                                                                & VL_MULS_QQQ(36, 
                                                                                 (0x0000000fffffffffULL 
                                                                                 & VL_EXTENDS_QI(36,19, vlSelfRef.quadra_top__DOT__b)), 
                                                                                 (0x0000000fffffffffULL 
                                                                                 & VL_EXTENDS_QI(36,18, 
                                                                                 (0x0001ffffU 
-                                                                                & vlSelfRef.x))))), 0x00000010U))) 
-                                            + ((IData)(
-                                                       (0x00007fffffffffffULL 
-                                                        & VL_SHIFTRS_QQI(47,47,32, 
-                                                                         (0x00007fffffffffffULL 
-                                                                          & VL_MULS_QQQ(47, 
+                                                                                & vlSelfRef.x))))), 0x0000000cU))) 
+                                                                + (IData)(
+                                                                          (0x00007fffffffffffULL 
+                                                                           & VL_SHIFTRS_QQI(47,47,32, 
+                                                                                (0x00007fffffffffffULL 
+                                                                                & VL_MULS_QQQ(47, 
                                                                                 (0x00007fffffffffffULL 
                                                                                 & VL_EXTENDS_QI(47,13, (IData)(vlSelfRef.quadra_top__DOT__c))), 
                                                                                 (0x00007fffffffffffULL 
@@ -72,8 +79,7 @@ void Vquadra_top___024root__trace_chg_0_sub_0(Vquadra_top___024root* vlSelf, Ver
                                                                                 & vlSelfRef.x))) 
                                                                                 * (QData)((IData)(
                                                                                 (0x0001ffffU 
-                                                                                & vlSelfRef.x))))))))), 0x00000022U))) 
-                                               + vlSelfRef.quadra_top__DOT__a)))),25);
+                                                                                & vlSelfRef.x))))))))), 0x0000001eU))))))), 4U))),25);
     bufp->chgQData(oldp+17,((0x0000000fffffffffULL 
                              & VL_MULS_QQQ(36, (0x0000000fffffffffULL 
                                                 & VL_EXTENDS_QI(36,19, vlSelfRef.quadra_top__DOT__b)), 
@@ -93,22 +99,24 @@ void Vquadra_top___024root__trace_chg_0_sub_0(Vquadra_top___024root* vlSelf, Ver
                                                                 * (QData)((IData)(
                                                                                 (0x0001ffffU 
                                                                                 & vlSelfRef.x)))))))))),47);
-    bufp->chgIData(oldp+21,((0x01ffffffU & (IData)(
-                                                   (0x0000000fffffffffULL 
-                                                    & VL_SHIFTRS_QQI(36,36,32, 
-                                                                     (0x0000000fffffffffULL 
-                                                                      & VL_MULS_QQQ(36, 
+    bufp->chgIData(oldp+21,((0x1fffffffU & (VL_SHIFTL_III(29,29,32, 
+                                                          VL_EXTENDS_II(29,25, vlSelfRef.quadra_top__DOT__a), 4U) 
+                                            + ((IData)(
+                                                       (0x0000000fffffffffULL 
+                                                        & VL_SHIFTRS_QQI(36,36,32, 
+                                                                         (0x0000000fffffffffULL 
+                                                                          & VL_MULS_QQQ(36, 
                                                                                 (0x0000000fffffffffULL 
                                                                                 & VL_EXTENDS_QI(36,19, vlSelfRef.quadra_top__DOT__b)), 
                                                                                 (0x0000000fffffffffULL 
                                                                                 & VL_EXTENDS_QI(36,18, 
                                                                                 (0x0001ffffU 
-                                                                                & vlSelfRef.x))))), 0x00000010U))))),25);
-    bufp->chgIData(oldp+22,((0x01ffffffU & (IData)(
-                                                   (0x00007fffffffffffULL 
-                                                    & VL_SHIFTRS_QQI(47,47,32, 
-                                                                     (0x00007fffffffffffULL 
-                                                                      & VL_MULS_QQQ(47, 
+                                                                                & vlSelfRef.x))))), 0x0000000cU))) 
+                                               + (IData)(
+                                                         (0x00007fffffffffffULL 
+                                                          & VL_SHIFTRS_QQI(47,47,32, 
+                                                                           (0x00007fffffffffffULL 
+                                                                            & VL_MULS_QQQ(47, 
                                                                                 (0x00007fffffffffffULL 
                                                                                 & VL_EXTENDS_QI(47,13, (IData)(vlSelfRef.quadra_top__DOT__c))), 
                                                                                 (0x00007fffffffffffULL 
@@ -119,7 +127,37 @@ void Vquadra_top___024root__trace_chg_0_sub_0(Vquadra_top___024root* vlSelf, Ver
                                                                                 & vlSelfRef.x))) 
                                                                                 * (QData)((IData)(
                                                                                 (0x0001ffffU 
-                                                                                & vlSelfRef.x))))))))), 0x00000022U))))),25);
+                                                                                & vlSelfRef.x))))))))), 0x0000001eU))))))),29);
+    bufp->chgIData(oldp+22,((0x1fffffffU & ((IData)(8U) 
+                                            + (VL_SHIFTL_III(29,29,32, 
+                                                             VL_EXTENDS_II(29,25, vlSelfRef.quadra_top__DOT__a), 4U) 
+                                               + ((IData)(
+                                                          (0x0000000fffffffffULL 
+                                                           & VL_SHIFTRS_QQI(36,36,32, 
+                                                                            (0x0000000fffffffffULL 
+                                                                             & VL_MULS_QQQ(36, 
+                                                                                (0x0000000fffffffffULL 
+                                                                                & VL_EXTENDS_QI(36,19, vlSelfRef.quadra_top__DOT__b)), 
+                                                                                (0x0000000fffffffffULL 
+                                                                                & VL_EXTENDS_QI(36,18, 
+                                                                                (0x0001ffffU 
+                                                                                & vlSelfRef.x))))), 0x0000000cU))) 
+                                                  + (IData)(
+                                                            (0x00007fffffffffffULL 
+                                                             & VL_SHIFTRS_QQI(47,47,32, 
+                                                                              (0x00007fffffffffffULL 
+                                                                               & VL_MULS_QQQ(47, 
+                                                                                (0x00007fffffffffffULL 
+                                                                                & VL_EXTENDS_QI(47,13, (IData)(vlSelfRef.quadra_top__DOT__c))), 
+                                                                                (0x00007fffffffffffULL 
+                                                                                & VL_EXTENDS_QQ(47,35, 
+                                                                                (0x00000003ffffffffULL 
+                                                                                & ((QData)((IData)(
+                                                                                (0x0001ffffU 
+                                                                                & vlSelfRef.x))) 
+                                                                                * (QData)((IData)(
+                                                                                (0x0001ffffU 
+                                                                                & vlSelfRef.x))))))))), 0x0000001eU)))))))),29);
 }
 
 void Vquadra_top___024root__trace_cleanup(void* voidSelf, VerilatedVcd* /*unused*/) {
