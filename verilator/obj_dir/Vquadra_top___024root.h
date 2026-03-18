@@ -33,6 +33,7 @@ class alignas(VL_CACHE_LINE_BYTES) Vquadra_top___024root final {
     VL_OUT(y,24,0);
     IData/*24:0*/ quadra_top__DOT__a;
     IData/*18:0*/ quadra_top__DOT__b;
+    IData/*28:0*/ quadra_top__DOT__u_quadra__DOT__sum_wide;
     IData/*31:0*/ __VactIterCount;
     VlUnpacked<QData/*63:0*/, 1> __VstlTriggered;
     VlUnpacked<QData/*63:0*/, 1> __VicoTriggered;

@@ -54,40 +54,46 @@ void Vquadra_top___024root___ico_sequent__TOP__0(Vquadra_top___024root* vlSelf) 
     __Vtableidx3 = (0x0000007fU & (vlSelfRef.x >> 0x00000011U));
     vlSelfRef.quadra_top__DOT__c = Vquadra_top__ConstPool__TABLE_hd77967ae_0
         [__Vtableidx3];
-    vlSelfRef.y = (0x01ffffffU & VL_SHIFTRS_III(29,29,32, 
-                                                (0x1fffffffU 
-                                                 & ((IData)(8U) 
-                                                    + 
-                                                    (VL_SHIFTL_III(29,29,32, 
-                                                                   VL_EXTENDS_II(29,25, vlSelfRef.quadra_top__DOT__a), 4U) 
-                                                     + 
-                                                     ((IData)(
-                                                              (0x0000000fffffffffULL 
-                                                               & VL_SHIFTRS_QQI(36,36,32, 
-                                                                                (0x0000000fffffffffULL 
-                                                                                & VL_MULS_QQQ(36, 
-                                                                                (0x0000000fffffffffULL 
-                                                                                & VL_EXTENDS_QI(36,19, vlSelfRef.quadra_top__DOT__b)), 
-                                                                                (0x0000000fffffffffULL 
-                                                                                & VL_EXTENDS_QI(36,18, 
+    vlSelfRef.quadra_top__DOT__u_quadra__DOT__sum_wide 
+        = (0x1fffffffU & (VL_SHIFTL_III(29,29,32, VL_EXTENDS_II(29,25, vlSelfRef.quadra_top__DOT__a), 4U) 
+                          + ((IData)((0x0000000fffffffffULL 
+                                      & VL_SHIFTRS_QQI(36,36,32, 
+                                                       (0x0000000fffffffffULL 
+                                                        & VL_MULS_QQQ(36, 
+                                                                      (0x0000000fffffffffULL 
+                                                                       & VL_EXTENDS_QI(36,19, vlSelfRef.quadra_top__DOT__b)), 
+                                                                      (0x0000000fffffffffULL 
+                                                                       & VL_EXTENDS_QI(36,18, 
                                                                                 (0x0001ffffU 
                                                                                 & vlSelfRef.x))))), 0x0000000cU))) 
-                                                      + (IData)(
-                                                                (0x00007fffffffffffULL 
-                                                                 & VL_SHIFTRS_QQI(47,47,32, 
-                                                                                (0x00007fffffffffffULL 
-                                                                                & VL_MULS_QQQ(47, 
-                                                                                (0x00007fffffffffffULL 
-                                                                                & VL_EXTENDS_QI(47,13, (IData)(vlSelfRef.quadra_top__DOT__c))), 
-                                                                                (0x00007fffffffffffULL 
-                                                                                & VL_EXTENDS_QQ(47,35, 
+                             + (IData)((0x00007fffffffffffULL 
+                                        & VL_SHIFTRS_QQI(47,47,32, 
+                                                         (0x00007fffffffffffULL 
+                                                          & VL_MULS_QQQ(47, 
+                                                                        (0x00007fffffffffffULL 
+                                                                         & VL_EXTENDS_QI(47,13, (IData)(vlSelfRef.quadra_top__DOT__c))), 
+                                                                        (0x00007fffffffffffULL 
+                                                                         & VL_EXTENDS_QQ(47,35, 
                                                                                 (0x00000003ffffffffULL 
                                                                                 & ((QData)((IData)(
                                                                                 (0x0001ffffU 
                                                                                 & vlSelfRef.x))) 
                                                                                 * (QData)((IData)(
                                                                                 (0x0001ffffU 
-                                                                                & vlSelfRef.x))))))))), 0x0000001eU))))))), 4U));
+                                                                                & vlSelfRef.x))))))))), 0x0000001eU))))));
+    vlSelfRef.y = (0x01ffffffU & ((0x1fffffffU & VL_SHIFTRS_III(29,29,32, vlSelfRef.quadra_top__DOT__u_quadra__DOT__sum_wide, 4U)) 
+                                  + ((1U & ((vlSelfRef.quadra_top__DOT__u_quadra__DOT__sum_wide 
+                                             >> 3U) 
+                                            & ((0U 
+                                                != 
+                                                (7U 
+                                                 & vlSelfRef.quadra_top__DOT__u_quadra__DOT__sum_wide)) 
+                                               | (0x1fffffffU 
+                                                  & VL_SHIFTRS_III(29,29,32, vlSelfRef.quadra_top__DOT__u_quadra__DOT__sum_wide, 4U))))) 
+                                     + ((vlSelfRef.quadra_top__DOT__u_quadra__DOT__sum_wide 
+                                         >> 0x0000001cU) 
+                                        & (0U != (0x0000000fU 
+                                                  & vlSelfRef.quadra_top__DOT__u_quadra__DOT__sum_wide))))));
 }
 
 void Vquadra_top___024root___eval_ico(Vquadra_top___024root* vlSelf) {

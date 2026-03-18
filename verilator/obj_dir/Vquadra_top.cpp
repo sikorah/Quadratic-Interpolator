@@ -139,6 +139,6 @@ VL_ATTR_COLD void Vquadra_top::traceBaseModel(VerilatedTraceBaseC* tfp, int leve
             " use --trace-fst with VerilatedFst object, and --trace-vcd with VerilatedVcd object");
     }
     stfp->spTrace()->addModel(this);
-    stfp->spTrace()->addInitCb(&trace_init, &(vlSymsp->TOP), name(), false, 46);
+    stfp->spTrace()->addInitCb(&trace_init, &(vlSymsp->TOP), name(), false, 51);
     Vquadra_top___024root__trace_register(&(vlSymsp->TOP), stfp->spTrace());
 }
