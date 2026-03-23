@@ -3,17 +3,24 @@ import re
 from decimal import Decimal, ROUND_HALF_EVEN
 
 
-def to_signed_hex32(value: Decimal, frac_bits: int = 28) -> str:
-    """Quantize Decimal to signed s(32-frac_bits).frac_bits and return 8-hex string."""
+def to_signed_hex32(value: Decimal, frac_bits: int = 28, word_bits: int = 32) -> str:
+    if frac_bits >= word_bits:
+        raise ValueError(
+            f"frac_bits ({frac_bits}) musi być mniejsze niż word_bits ({word_bits})"
+        )
+ 
     scale = Decimal(1 << frac_bits)
     q = int((value * scale).to_integral_value(rounding=ROUND_HALF_EVEN))
-
-    min_q = -(1 << 31)
-    max_q = (1 << 31) - 1
-    if q < min_q or q > max_q:
-        raise ValueError(f"Coefficient out of int32 range after quantization: {value} -> {q}")
-
-    return f"{(q & 0xFFFFFFFF):08x}"
+ 
+    q_min = -(1 << (word_bits - 1))
+    q_max =  (1 << (word_bits - 1)) - 1
+    if not (q_min <= q <= q_max):
+        raise ValueError(
+            f"Współczynnik poza zakresem int{word_bits} po kwantyzacji: {value} → {q}"
+        )
+ 
+    hex_digits = word_bits // 4
+    return f"{(q & ((1 << word_bits) - 1)):0{hex_digits}x}"
 
 
 def load_coeffs_from_cpp_table(coeffs_path: str):

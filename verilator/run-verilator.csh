@@ -15,7 +15,7 @@ set top_module = "quadra_top"
 
 verilator \
     --cc \
-    -CFLAGS "-std=c++17 -I${ACT_DIR} -I${CPP_DIR}" \
+    -CFLAGS "-std=c++17 -DFULL_PRECISION -I${ACT_DIR} -I${CPP_DIR}" \
     ${CPP_DIR}/Quadra.cpp \
     sim_main.cpp \
     --exe \
@@ -44,7 +44,6 @@ verilator \
 #    --clk screuclk \
     \
     +define+NOFLOPDELAY=1 \
-    +define+FULL_PRECISION \
     \
     +incdir+${RTL_DIR} \
     +incdir+${CPP_DIR} \

@@ -37,7 +37,7 @@ VM_PREFIX = Vquadra_top
 VM_MODPREFIX = Vquadra_top
 # User CFLAGS (from -CFLAGS on Verilator command line)
 VM_USER_CFLAGS = \
-  -std=c++17 -I/home/sikorah/Workspace/libs/ac_types/include -I/home/sikorah/Workspace/c++-model \
+  -std=c++17 -DFULL_PRECISION -I/home/sikorah/Workspace/libs/ac_types/include -I/home/sikorah/Workspace/c++-model \
 
 # User LDLIBS (from -LDFLAGS on Verilator command line)
 VM_USER_LDLIBS = \

@@ -131,6 +131,9 @@ inline void checkOutput
 {
     using namespace std;
 
+    if (lat_fifo.empty())
+        return;
+
     x_fxd_t x_fxd = lat_fifo.front();
                     lat_fifo.pop_front();
 
@@ -200,8 +203,8 @@ void testQuadra
     using namespace std;
 
     // Test params:
-//  uint32_t x_start = 0x000000; // 0.0
-    uint32_t x_start = 0xfffff0;
+    uint32_t x_start = 0x000000; // 0.0
+//    uint32_t x_start = 0xfffff0;
     uint32_t x_stop  = 0xffffff; // 1.999...
     uint32_t x_step  = 0x000001; // exhaustive test
 //  uint32_t x_step  = 0x000001; // sparse test
@@ -231,7 +234,8 @@ void testQuadra
 
         atPosEdgeClk(top, contextp, trace_fp);
         clock_cntr++;
-        checkOutput(top, lat_fifo);
+        if (!lat_fifo.empty())
+            checkOutput(top, lat_fifo);
     }
 
     uint64_t lat_fifo_size = lat_fifo.size();
